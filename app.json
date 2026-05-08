@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Cipher",
+    "slug": "cipher",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "cipher",
+    "newArchEnabled": true,
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.cipher.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We use your approximate city to detect unusual sign-in locations.",
+        "NSFaceIDUsageDescription": "Used to authorize sensitive actions on your account."
+      }
+    },
+    "android": {
+      "package": "com.cipher.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "READ_PHONE_STATE",
+        "USE_BIOMETRIC"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "We use your approximate city to detect unusual sign-in locations."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash.png",
+          "backgroundColor": "#000000",
+          "resizeMode": "contain"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
